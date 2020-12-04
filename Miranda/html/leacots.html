@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="../res/css/main.css">
+<!--加载meta IE兼容文件-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<!--    header-->
+    <header>
+      <div class="header">
+        <div class="menu-btn">
+          <div class="menu"></div>
+        </div>
+        <h1 class="logo">
+          <a href="index.html">
+            <span>MYBLOG</span>
+            <img src="../res/img/logo.png">
+          </a>
+        </h1>
+        <div class="nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="leacots.html">Application</a>
+          <a href="album.html">Calculate GPA</a>
+          <a href="about.html">Computer Science Program</a>
+        </div>
+        <ul class="layui-nav header-down-nav">
+          <li class="layui-nav-item"><a href="index.html" class="active">Home</a></li>
+          <li class="layui-nav-item"><a href="leacots.html">Application</a></li>
+          <li class="layui-nav-item"><a href="album.html">Calculate GPA</a></li>
+          <li class="layui-nav-item"><a href="about.html">Computer Science Program</a></li>
+        </ul>
+        <p class="welcome-text">
+          Welcome to <span class="name">Auburn </span>University~
+        </p>
+      </div>
+    </header>
+<!--banner-->
+   <div style="text-align: center">
+          <h1 style="color: red"><span>Teaching Assistant Application</span></h1>
+          </div>
+  <div class="content whisper-content leacots-content">
+   
+    <div class="cont w1000">
+      <div class="whisper-list">
+        <div class="item-box">
+          <div class="review-version">
+              <div class="form-box">
+                <img class="banner-img" src="../res/img/lunbo2.png">
+              </div>
+              
+              
+      </div>
+      <h1 style="color: crimson">Please complete your information</h1>
+      <hr class="layui-bg-red">
+      <form class="layui-form" action="">
+        
+          <div class="layui-form-item">
+            <label class="layui-form-label">ID</label>
+            <div class="layui-input-block">
+              <input type="text" name="title" required  lay-verify="required" placeholder="Please enter your ID" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          
+        <div class="layui-form-item">
+            <label class="layui-form-label">First Name</label>
+            <div class="layui-input-block">
+              <input type="text" name="title" required  lay-verify="required" placeholder="Please enter your First Name" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          
+            <div class="layui-form-item">
+                <label class="layui-form-label">Last Name</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" required  lay-verify="required" placeholder="Please enter your Last Name" autocomplete="off" class="layui-input">
+                </div>
+             </div>
+          
+              <div class="layui-form-item">
+                <label class="layui-form-label">Sexual</label>
+                <div class="layui-input-block">
+                  <input type="radio" name="sex" value="男" title="Male">
+                  <input type="radio" name="sex" value="女" title="Female" checked>
+                </div>
+              </div>
+          
+             <div class="layui-form-item">
+                <label class="layui-form-label">GPA</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" required  lay-verify="required" placeholder="Please enter your GPA" autocomplete="off" class="layui-input">
+                </div>
+             </div>
+   
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">Remark</label>
+                <div class="layui-input-block">
+                  <textarea name="desc" class="layui-textarea"></textarea>
+                </div>
+              </div>
+                    <div style="text-align: center">
+          <h2 style="color: coral">Thank you for your application</h2>
+          </div>
+          
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="formDemo">Submit</button>
+      <button type="reset" class="layui-btn layui-btn-primary">Reset</button>
+    </div>
+  </div>
+</form>
+    </div>
+  </div>
+  <script type="text/html" id="laytplCont">
+    <div class="cont">
+      <div class="img">
+        {{#  if(d.avatar){ }}
+        <img src="{{d.avatar}}" alt="">
+        {{#  } else { }}
+        <img src="../res/img/header.png" alt="">
+        {{# } }}
+      </div>
+      <div class="text">
+        <p class="tit"><span class="name">{{d.name}}</span><span class="data">2018/06/06</span></p>
+        <p class="ct">{{d.cont}}</p>
+      </div>
+    </div>
+  </script>
+ 
+        <!--    footer-->
+    <footer>
+      <div class="footer-wrap">
+        <div class="footer w1000">
+          <div class="qrcode">
+            <img src="../res/img/erweima.jpg">
+          </div>
+          <div class="practice-mode">
+            <img src="../res/img/down_img.jpg">
+            <div class="text">
+              <h4 class="title">Contact Information</h4>
+              <p>Wechat<span class="WeChat">1234567890</span></p>
+              <p>Telephone<span class="iphone">1234567890</span></p>
+              <p>E-Mail<span class="email">1234567890@qq.com</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+        
+        
+  <script type="text/javascript" src="../res/layui/layui.js"></script>
+  <script type="text/javascript">
+   layui.config({
+      base: '../res/js/util/'
+    }).use(['element','laypage','form','menu'],function(){
+      element = layui.element,laypage = layui.laypage,form = layui.form,menu = layui.menu;
+      laypage.render({
+        elem: 'demo'
+        ,count: 70 //数据总数，从服务端得到
+      });
+      menu.init();
+      menu.submit()
+    })
+  </script>
+</body>
+</html>
