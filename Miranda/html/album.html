@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Document</title>
+  <link rel="stylesheet"  href="../res/layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="../res/css/main.css">
+    <script src="../res/js/util/test_scores.js"></script>
+<!--加载meta IE兼容文件-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+          <header>
+      <div class="header">
+        <div class="menu-btn">
+          <div class="menu"></div>
+        </div>
+        <h1 class="logo">
+          <a href="index.html">
+            <span>MYBLOG</span>
+            <img src="../res/img/logo.png">
+          </a>
+        </h1>
+        <div class="nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="leacots.html">Application</a>
+          <a href="album.html">Calculate GPA</a>
+          <a href="about.html">Computer Science Program</a>
+        </div>
+        <ul class="layui-nav header-down-nav">
+          <li class="layui-nav-item"><a href="index.html" class="active">Home</a></li>
+          <li class="layui-nav-item"><a href="leacots.html">Application</a></li>
+          <li class="layui-nav-item"><a href="album.html">Calculate GPA</a></li>
+          <li class="layui-nav-item"><a href="about.html">Computer Science Program</a></li>
+        </ul>
+        <p class="welcome-text">
+          Welcome to <span class="name">Auburn </span>University~
+        </p>
+      </div>
+    </header>
+    
+
+  <div class="album-content w1000"  id="layer-photos-demo" class="layer-photos-demo">
+           <div class="layui-carousel" id="test1">
+            <div carousel-item style="all: center">
+            <div><img src="../res/img/lunbo1.png"></div>
+            <div><img src="../res/img/lunbo3.png"></div>
+          </div>
+        </div>
+      
+      
+<div style="text-align: center">
+    <h1 style="color: cornflowerblue">GPA Calculate</h1>
+    
+    <label for="grade">Grade:</label>
+    <input type="text" id="grade"><br>
+        
+    <label for="hour">Hour:</label>
+    <input type="text" id="hour"><br>
+    
+    <label>&nbsp;</label>
+	<input type="button" id="add" value="Add to Array" >
+    <input type="button" id="display_results" value="Display Results" >
+	<input type="button" id="display_scores" value="Display Scores" ><br>
+	
+    <div id="results"></div>
+    <table id="scores_table"></table>
+</div>
+  
+      
+  </div>
+
+<!--    footer-->
+    <footer>
+      <div class="footer-wrap">
+        <div class="footer w1000">
+          <div class="qrcode">
+            <img src="../res/img/erweima.jpg">
+          </div>
+          <div class="practice-mode">
+            <img src="../res/img/down_img.jpg">
+            <div class="text">
+              <h4 class="title">Contact Information</h4>
+              <p>Wechat<span class="WeChat">1234567890</span></p>
+              <p>Telephone<span class="iphone">1234567890</span></p>
+              <p>E-Mail<span class="email">1234567890@qq.com</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    <script src="../res/layui/layui.js"></script>
+    <script>
+    layui.use('carousel', function(){
+      var carousel = layui.carousel;
+      //建造实例
+      carousel.render({
+        elem: '#test1'
+        ,width: "100%" //设置容器宽度
+        ,arrow: 'always' //始终显示箭头
+        
+        
+        //,anim: 'updown' //切换动画方式
+      });
+    });
+    </script>
+
+</body>
+</html>
